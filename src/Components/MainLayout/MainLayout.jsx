@@ -1,0 +1,16 @@
+import React from 'react';
+import Navbar from './../Navbar/Navbar';
+import Footer from './../Footer/Footer';
+import { Outlet } from 'react-router-dom';
+
+export default function MainLayout({ logout, userData }) {
+    return (
+        <>
+            <Navbar logout={logout} userData={userData}></Navbar>
+
+            <Outlet />
+
+            {/* <Footer /> */}
+        </>
+    );
+}
