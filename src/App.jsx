@@ -6,7 +6,7 @@ import Register from './Components/Register/Register';
 import Login from './Components/Login/Login';
 import Movies from './Components/Movies/Movies';
 import TvShows from './Components/TvShows/TvShows';
-import Network from './Components/Network/Network';
+// import Network from './Components/Network/Network';
 import About from './Components/About/About';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import { useState } from 'react';
@@ -61,7 +61,7 @@ export default function App() {
         { path: 'tvShows', element: <ProtectedRoute> <TvShows /> </ProtectedRoute> },
         { path: 'search', element: <ProtectedRoute> <Search /> </ProtectedRoute> },
         { path: 'profile', element: <ProtectedRoute> <Profile userData={userData} />  </ProtectedRoute> },
-        { path: 'network', element: <ProtectedRoute> <Network /></ProtectedRoute> },
+        // { path: 'network', element: <ProtectedRoute> <Network /></ProtectedRoute> },
         { path: 'about', element: <ProtectedRoute> <About /> </ProtectedRoute> },
         { path: 'details/:id/:type', element: <ProtectedRoute> <MovieDetails /> </ProtectedRoute> },
 
