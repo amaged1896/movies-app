@@ -16,6 +16,7 @@ export default function Home() {
     let getTrending = async (mediaType, destination) => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/trending/${mediaType}/day?api_key=26357cbc916cdded8bdec4976f49936a`);
         // console.log(data.results);
+        setIsLoading(true);
         destination(data.results);
         // console.log(data);
         setIsLoading(false);
