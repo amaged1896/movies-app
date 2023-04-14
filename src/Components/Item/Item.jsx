@@ -10,7 +10,7 @@ export default function Item({ data, id }) {
 
     return (
         <>
-            <div className="col-md-2 position-relative ">
+            <div className="col-md-2 col-xs-4 col-sm-4 position-relative ">
                 <div key={id} className="item position-relative overflow-hidden">
 
                     {

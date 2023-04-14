@@ -35,7 +35,7 @@ export default function Home() {
             {isLoading ? <Loading /> : <>
 
                 <div className="row py-4">
-                    <div className="col-md-4">
+                    <div className="col-md-4 ">
                         <div className="content d-flex justify-content-center flex-column h-100">
                             <h2 className='position-relative'>Trending <br />Movies<br />To Watch</h2>
                             <p className='text-muted'>Watch them now on our app</p>
@@ -44,7 +44,7 @@ export default function Home() {
                     {movies?.filter((movie) => movie.vote_average !== 0).slice(1, 11).map((movie) => <Item key={movie.id} data={movie} />)}
                 </div>
                 <div className="row py-4">
-                    <div className="col-md-4">
+                    <div className="col-md-4 ">
                         <div className="content d-flex justify-content-center flex-column h-100">
                             <h2 className='position-relative'>Trending <br />Tv<br />To Watch</h2>
                             <p className='text-muted'>Watch them now on our app</p>
