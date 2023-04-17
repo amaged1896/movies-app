@@ -32,7 +32,6 @@ export default function Navbar({ userData, logout }) {
 
                     {/* left ul */}
                     <div className='d-flex ms-auto align-items-center'>
-                        <input className='form-control me-3' type="text" placeholder='Search...' />
                         {/* navbar icons */}
                         <ul className='list-unstyled d-flex mb-0 me-3'>
                             <li className='mx-1'>
