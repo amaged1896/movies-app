@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 export default function Navbar({ userData, logout }) {
 
@@ -28,6 +29,9 @@ export default function Navbar({ userData, logout }) {
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="about">About</Link>
                         </li>
+                        {/* <li className="nav-item">
+                            <SocialMedia />
+                        </li> */}
                     </ul> : ''}
 
                     {/* left ul */}

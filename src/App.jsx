@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { createHashRouter, Navigate, RouterProvider } from 'react-router-dom';
 import MainLayout from './Components/MainLayout/MainLayout';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
@@ -51,7 +51,7 @@ export default function App() {
     return <Navigate to='/login' />;
   };
 
-  const routers = createBrowserRouter([
+  const routers = createHashRouter([
     {
       path: '/', element: <MainLayout logout={logout} userData={userData} />, children: [
         { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },

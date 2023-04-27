@@ -15,20 +15,9 @@ export default function TvShows() {
     const getTv = async () => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=26357cbc916cdded8bdec4976f49936a&page=${currentPage}`);
         setTv(data.results);
-        // console.log(data.results);
+        console.log(data.results);
         setIsLoading(false);
     };
-
-    // const searchTv = async (e) => {
-    //     if (e.target.value) {
-    //         let { data } = await axios.get(`https://api.themoviedb.org/3/search/tv?api_key=26357cbc916cdded8bdec4976f49936a&language=en-US&page=1&query=${e.target.value}&include_adult=false`);
-    //         // console.log(data.results);
-    //         setTv(data.results);
-    //         setIsLoading(false);
-    //     } else {
-    //         getTv();
-    //     }
-    // };
 
     useEffect(() => {
         setIsLoading(true);
