@@ -44,7 +44,7 @@ export default function Login({ saveUser }) {
                 setApiError(null);
             } else {
                 // error
-                setApiError('Email already registered');
+                setApiError('Invalid email or password');
                 setIsLoading(false);
             }
         }
