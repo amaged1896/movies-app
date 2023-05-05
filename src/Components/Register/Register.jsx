@@ -26,9 +26,9 @@ export default function Register() {
     const [isLoading, setIsLoading] = useState(false);
     let navigate = useNavigate();
 
-    useEffect(() => {
-        console.log(user);
-    }, [user]);
+    // useEffect(() => {
+    //     // console.log(user);
+    // }, [user]);
 
     const register = async (e) => {
         e.preventDefault();
@@ -37,7 +37,7 @@ export default function Register() {
             // success
             setIsLoading(true);
             let { data } = await axios.post(`https://route-movies-api.vercel.app/signup`, user);
-            console.log(data);
+            // console.log(data);
             if (data.message == 'success') {
                 // navigate to login page
                 navigate('/login');
@@ -79,7 +79,7 @@ export default function Register() {
             }),
         });
         let res = schema.validate(user, { abortEarly: false });
-        console.log(res);
+        // console.log(res);
         if (res.error) {
             setValidationError(res.error.details);
             return false;

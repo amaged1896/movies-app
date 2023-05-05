@@ -9,11 +9,11 @@ export default function MovieDetails() {
     const [isLoading, setIsLoading] = useState(true);
 
     let { id, type } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const getDetails = async () => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/${type}/${id}?api_key=26357cbc916cdded8bdec4976f49936a`);
-        console.log(data);
+        // console.log(data);
         setDetails(data);
         setIsLoading(false);
     };

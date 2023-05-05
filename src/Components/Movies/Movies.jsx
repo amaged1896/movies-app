@@ -12,7 +12,7 @@ export default function Movies() {
     let pageList = new Array(15).fill('x').map((ele, i) => i + 1);
     let getMovies = async (mediaType, destination) => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/trending/${mediaType}/day?api_key=26357cbc916cdded8bdec4976f49936a&page=${currentPage}`);
-        console.log(data.results);
+        // console.log(data.results);
         destination(data.results);
         setIsLoading(false);
     };

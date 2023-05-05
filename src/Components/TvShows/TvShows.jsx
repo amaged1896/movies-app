@@ -15,7 +15,7 @@ export default function TvShows() {
     const getTv = async () => {
         let { data } = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=26357cbc916cdded8bdec4976f49936a&page=${currentPage}`);
         setTv(data.results);
-        console.log(data.results);
+        // console.log(data.results);
         setIsLoading(false);
     };
 

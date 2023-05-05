@@ -24,7 +24,7 @@ export default function Login({ saveUser }) {
     };
 
     useEffect(() => {
-        console.log(user);
+        // console.log(user);
     }, [user]);
 
     const login = async (e) => {
@@ -34,7 +34,7 @@ export default function Login({ saveUser }) {
             // success
             setIsLoading(true);
             let { data } = await axios.post(`https://route-movies-api.vercel.app/signin`, user);
-            console.log(data);
+            // console.log(data);
             if (data.message == 'success') {
                 // set token in localStorage and navigate to home page
                 localStorage.setItem("token", data.token);
@@ -63,7 +63,7 @@ export default function Login({ saveUser }) {
             }),
         });
         let res = schema.validate(user, { abortEarly: false });
-        console.log(res);
+        // console.log(res);
         if (res.error) {
             setValidationError(res.error.details);
             return false;
