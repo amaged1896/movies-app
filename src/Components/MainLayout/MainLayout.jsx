@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './../Navbar/Navbar';
-import Footer from './../Footer/Footer';
 import { Outlet } from 'react-router-dom';
+import MyNavbar from './../Navbar/Navbar';
 
 export default function MainLayout({ logout, userData }) {
     return (
         <>
-            <Navbar logout={logout} userData={userData}></Navbar>
+            {/* <Navbar ></Navbar> */}
+            <MyNavbar logout={logout} userData={userData} />
 
             <Outlet />
 
