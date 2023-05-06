@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import MyNavbar from './../Navbar/Navbar';
+import MyNavbar from './../Navbar/MyNavbar';
 
 export default function MainLayout({ logout, userData }) {
     return (

@@ -16,9 +16,9 @@ function MyNavbar({ userData, logout }) {
                 <Navbar.Toggle className='ml-auto' aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
                 <Navbar.Collapse id="basic-navbar-nav">
 
-                    <Nav className="ml-auto" onClick={handleNavClick}>
+                    <Nav className="ms-auto" onClick={handleNavClick}>
                         {/* left ul */}
-                        {userData ? <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        {userData ? <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
                             <li className="nav-item" >
                                 <Link className="nav-link active" aria-current="page" to="">Home</Link>
                             </li>
@@ -41,31 +41,16 @@ function MyNavbar({ userData, logout }) {
 
                         {/* left ul */}
                         <div className='d-flex ms-auto align-items-center'>
-                            {/* navbar icons */}
-                            <ul className='list-unstyled d-flex mb-0 me-3'>
-                                <li className='mx-1'>
-                                    <i className='fab fa-facebook'></i>
-                                </li>
-                                <li className='mx-1'>
-                                    <i className='fab fa-twitter'></i>
-                                </li>
-                                <li className='mx-1'>
-                                    <i className='fab fa-youtube'></i>
-                                </li>
-                                <li className='mx-1'>
-                                    <i className='fab fa-instagram'></i>
-                                </li>
-                            </ul>
-                            {/* navbar icons */}
+
                             {/* right ul */}
                             <ul className="navbar-nav  mb-2 mb-lg-0">
                                 {userData ?
                                     <>
-                                        <li className="nav-item cursor-pointer">
+                                        <li className="nav-item cursor-pointer m-0">
                                             <Link to="profile" className="nav-link active" aria-current="page" >{userData.first_name}</Link>
                                         </li>
-                                        <li className="nav-item cursor-pointer">
-                                            <span className="nav-link active btn pointer p-1" aria-current="page" onClick={logout} >Logout</span>
+                                        <li className="nav-item  cursor-pointer">
+                                            <span className="nav-link logout active btn pointer p-1" aria-current="page" onClick={logout} >Logout</span>
                                         </li>
                                     </> : <>
                                         <li className="nav-item">
