@@ -34,7 +34,17 @@ const Search = () => {
         <div className="container py-5">
             <div className="row">
                 <input type="text" onChange={searchMovie} className='mb-3 form-control bg-dark text-white' placeholder='Search...' />
-                {isLoading ? <Loading /> : search?.filter((movie) => movie.vote_average !== 0 && movie.poster_path).map((movie) => <Item key={movie.id} data={movie} />)}
+                {isLoading ? <Loading /> : search?.filter((movie) =>
+                    movie.vote_average !== 0 &&
+                    movie.poster_path &&
+                    !movie?.original_title?.toLowerCase().includes('sex') &&
+                    !movie?.original_title?.toLowerCase().includes('porn') &&
+                    !movie?.name?.toLowerCase().includes('sex') &&
+                    !movie?.name?.toLowerCase().includes('porn') &&
+                    !movie?.title?.toLowerCase().includes("sex") &&
+                    !movie?.title?.toLowerCase().includes("porn")
+                ).map((movie) => <Item key={movie.id} data={movie} />)}
+                {console.log(search)}
             </div>
         </div>
     );
